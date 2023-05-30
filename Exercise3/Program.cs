@@ -25,7 +25,7 @@ int[,] GetArray()
     {
         for (int j = 0; j < result.GetLength(1); j++)
         {
-            result[i, j] = new Random().Next(0,10);
+            result[i, j] = new Random().Next(0, 10);
         }
     }
     return result;
@@ -49,22 +49,17 @@ double[] ArithmeticMean(int[,] newArray)
 
     for (int k = 0; k < newArray.GetLength(1); k++)
     {
-    for(int i = 0; i< newArray.GetLength(0); i++)
-    
-    
-               
+        for (int i = 0; i < newArray.GetLength(0); i++)
+
+
+
         {
-               
-                
-                
-                     result[k] =result[k] + Convert.ToDouble(newArray[i,k]);
-                
-               
-               }
-               result[k] = result[k]/(newArray.GetLength(0)); 
-               
+            result[k] = result[k] + Convert.ToDouble(newArray[i, k]);
+        }
+        result[k] = result[k] / (newArray.GetLength(0));
+
     }
-    
+
     return result;
 }
 
@@ -72,7 +67,7 @@ void PrintArray1(double[] inArray)
 {
     for (int i = 0; i < inArray.Length; i++)
     {
-                    Console.Write($" {Math.Round(inArray[i], 2)} ");
+        Console.Write($" {Math.Round(inArray[i], 2)} ");
     }
     Console.WriteLine();
 }
